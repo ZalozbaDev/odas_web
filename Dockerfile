@@ -30,7 +30,7 @@ RUN cd /home/developer/odas/ && mkdir build && cd build && cmake .. && make
 
 RUN git clone https://github.com/ZalozbaDev/odas_web.git /home/developer/odas_web/
 
-RUN cd /home/developer/odas_web/ && npm install
+RUN cd /home/developer/odas_web/ && CFLAGS=-Wno-error CPPFLAGS=-Wno-error npm install
 
 # CMD /startme.sh
 
